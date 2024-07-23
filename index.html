@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Response Display</title>
+    <script>
+        function fetchApiResponse() {
+            fetch('https://api.enphaseenergy.com/api/v2/systems/[system_id]/summary')
+                .then(response => response.json())
+                .then(data => {
+                    // Display the response data here
+                    console.log(data);
+                })
+                .catch(error => {
+                    // Handle any errors here
+                    console.error(error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1>API Response Display</h1>
+    <button onclick="fetchApiResponse()">Fetch API Response</button>
+</body>
+</html>
